@@ -1,88 +1,103 @@
 "use client"
 
-import Header from "@/components/Header"
 import Container from "@/components/ui/container"
 import Image from "next/image"
 import Footer from "@/components/Footer"
 import { Separator } from "@/components/ui/separator"
+import { Button } from "@/components/ui/button"
+import { Sun, Moon } from "lucide-react"
+import { useTheme } from "next-themes"
 
 export default function Home() {
+  const {theme, setTheme } = useTheme();
   return (
     <>
-      <Header />
         <Container>
+          <div className="flex justify-center">
+            <Button variant="ghost" size="icon" aria-label="Toggle Theme"
+                    className="mt-7" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+                        <Sun className="h-6 w-6 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                        <Moon className="absolute h-6 w-6 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                        <span className="sr-only">Toggle Theme</span>
+            </Button>
+          </div>
           <div>
           <Image
               priority
               src="/images/face.jpg"
-              className="rounded-full flex mx-auto my-14"
+              className="rounded-full mx-auto mt-7 mb-7"
               height={275}
               width={275}
               alt="Picture of Eliseo's face"
             />
           </div>
-          <div className="flex flex-col items-center mt-15 mb-44">
-            <h2 className="text-3xl font-bold mb-5">hey there!</h2>
-            <p>i&apos;m eliseo-jose, but my friends call me <b>e.j.</b>! welcome to my personal site!</p>
-            <p>i wanted this to be as comfy as my room, hence the name, so please make yourself at home & enjoy!</p>
-            <p>without further ado; a few things about me...</p>
+          <div className="flex flex-col justify-center items-center text-center mb-32 leading-7">
+            <h2 className="text-3xl font-bold mb-6">hey there!</h2>
+            <p>i&apos;m eliseo-jose, but my friends call me <b>e.j.</b>! welcome to my personal site.</p>
+            <p>i wanted this to be as comfy as my own room, hence the name, so please make yourself at home & enjoy!</p>
+            <p className="mt-6">without further ado; a few things about me...</p>
           </div>
           <Separator orientation="horizontal" className="my-10"/>
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col sm:flex-row justify-around items-center text-center mb-14 mx-3">
             <Image
               src="/images/vscodestock.jpg"
-              className="rounded-full flex mt-16 mb-5"
+              className="rounded-full mt-6 mb-7"
               height={400}
               width={400}
               alt="Picture of laptop screen with code on it"
             />
             <div>
-              <h2 className="text-3xl font-bold mb-5">i&apos;m a <b>web dev</b></h2>
-              <p>with skills in:</p>
+              <h2 className="text-3xl font-bold mb-7">i&apos;m a <b className="underline">web developer</b></h2>
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript & Typescript</li>
-                <li>React.js</li>
-                <li>Next.js</li>
-                <li>& more (hello, my fellow command line nerds)</li>
+                <li>with skills in:</li>
+                  <ul className="grid grid-flow-col grid-rows-3 gap-2 sm:list-disc max-w-full underline">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript & typescript</li>
+                    <li>react.js</li>
+                    <li>next.js</li>
+                    <li>& more (hello, fellow command line nerds)</li>
+                  </ul>
               </ul>
-              <p>the internet pervades every industry in modern-day life & i&apos;m excited to make my own impact on it!</p>
+              <p className="mt-4 leading-7">the internet pervades every industry in modern-day life & i&apos;m excited to make an impact on it!</p>
             </div>
           </div>
           <Separator orientation="horizontal" className="my-10"/>
-          <div className="flex flex-row-reverse justify-between items-center">
+          <div className="flex flex-col sm:flex-row-reverse justify-between items-center text-center leading-7 mb-14">
             <Image
               src="/images/kick.jpg"
-              className="rounded-full flex mt-16 mb-5"
+              className="rounded-full mt-6 mb-7"
               height={300}
               width={300}
               alt="Picture of Eliseo throwing a roundhouse kick"
             />
-            <div>
-            <h2 className="text-3xl font-bold mb-5">i&apos;m a <b>martial artist</b></h2>
+            <div className="flex flex-col mx-3">
+            <h2 className="text-3xl font-bold mb-7">i&apos;m a <b className="underline">martial artist</b></h2>
             <p>
-              with nearly a decade of experience, my continuous effort towards growth has lead me to
-              a systems-style of thinking that has pervaded the rest of my life 
+              perennial effort towards growth has lead me to
+              a systems-style of thinking that has impacted the rest of my life. 
             </p> 
             <p>
               this has lead to not only efficiency & efficacy, but also
-              adaptability & resiliency in everything i do
+              adaptability & resiliency in everything i tackle.
             </p>
+            <p>~10 years of experience across muay thai, boxing, and jiu-jitsu; and judo is next!</p>
             </div>
           </div>
           <Separator orientation="horizontal" className="my-10"/>
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-center leading-7 mb-14">
             <Image
                 src="/images/bookshelf.jpg"
-                className="rounded-full flex mt-16 mb-5"
+                className="rounded-full mt-6 mb-7"
                 height={50}
                 width={300}
                 alt="Picture of books taken by yours truly"
               />
-            <div>
-              <h2 className="text-3xl font-bold mb-5">i&apos;m a <b>huge nerd</b></h2>
-              <p>mainly for learning & personal development. i&apos;m always trying to better myself, my systems, and my principles.</p>
+            <div className="mx-3">
+              <h2 className="text-3xl font-bold mb-7">i&apos;m a <b className="underline">huge nerd</b></h2>
+              <p>mainly for learning & personal development.</p>
+              <p>i&apos;m always trying to better myself, my systems, and my principles.</p>
+              <p>sitting down with a book or an hour+ long lecture and taking notes is my favorite way to enjoy an afternoon.</p>
             </div>
           </div>
           <Separator orientation="horizontal" className="my-10"/>
@@ -90,16 +105,16 @@ export default function Home() {
             <Image
                 priority
                 src="/images/sunflowerface.jpg"
-                className="rounded-full flex mx-auto my-14"
+                className="rounded-full mx-auto mt-12 mb-7"
                 height={200}
                 width={200}
                 alt="Picture of Eliseo's family!"
               />
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center text-center leading-7 mx-3">
             <h2 className="text-3xl font-bold mb-5">thanks for visiting!</h2>
             <p>
-              if you&apos;ve looked at my works and want to build something together,
+              if you&apos;ve looked at my work and want to build something together,
               or if you&apos;ve read one of my blog posts and wanted to share some thoughts,  
               please reach out!
             </p>
