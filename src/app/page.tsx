@@ -2,25 +2,13 @@
 
 import Container from "@/components/ui/container"
 import Image from "next/image"
-import Footer from "@/components/Footer"
 import { Separator } from "@/components/ui/separator"
-import { Button } from "@/components/ui/button"
-import { Sun, Moon } from "lucide-react"
-import { useTheme } from "next-themes"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 export default function Home() {
-  const {theme, setTheme } = useTheme();
   return (
     <>
         <Container>
-          <div className="flex justify-center">
-            <Button variant="ghost" size="icon" aria-label="Toggle Theme"
-                    className="mt-7" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-                        <Sun className="h-6 w-6 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                        <Moon className="absolute h-6 w-6 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                        <span className="sr-only">Toggle Theme</span>
-            </Button>
-          </div>
           <div>
           <Image
               priority
@@ -31,9 +19,18 @@ export default function Home() {
               alt="Picture of Eliseo's face"
             />
           </div>
-          <div className="flex flex-col justify-center items-center text-center mb-32 leading-7">
+          <div className="flex flex-col justify-center items-center text-center mb-32 leading-7 mx-3">
             <h2 className="text-3xl font-bold mb-6">hey there!</h2>
-            <p>i&apos;m eliseo-jose, but my friends call me <b>e.j.</b>! welcome to my personal site.</p>
+            <p>i&apos;m 
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className="ms-1"> eliseo-jose
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>pronounced: el-ee-say-oh hoh-say</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>, but my friends call me <b>e.j.</b>! welcome to my personal site.</p>
             <p>i wanted this to be as comfy as my own room, hence the name, so please make yourself at home & enjoy!</p>
             <p className="mt-6">without further ado; a few things about me...</p>
           </div>
@@ -50,7 +47,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold mb-7">i&apos;m a <b className="underline">web developer</b></h2>
               <ul>
                 <li>with skills in:</li>
-                  <ul className="grid grid-flow-col grid-rows-3 gap-2 sm:list-disc max-w-full underline">
+                  <ul className="grid grid-flow-col grid-rows-3 gap-2 max-w-full underline">
                     <li>html</li>
                     <li>css</li>
                     <li>javascript & typescript</li>
@@ -63,7 +60,7 @@ export default function Home() {
             </div>
           </div>
           <Separator orientation="horizontal" className="my-10"/>
-          <div className="flex flex-col sm:flex-row-reverse justify-between items-center text-center leading-7 mb-14">
+          <div className="flex flex-col sm:flex-row-reverse justify-between items-center text-center leading-7 mb-14 sm:mx-14">
             <Image
               src="/images/kick.jpg"
               className="rounded-full mt-6 mb-7"
@@ -85,7 +82,7 @@ export default function Home() {
             </div>
           </div>
           <Separator orientation="horizontal" className="my-10"/>
-          <div className="flex flex-col sm:flex-row justify-between items-center text-center leading-7 mb-14">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-center leading-7 mb-14 sm:mx-14">
             <Image
                 src="/images/bookshelf.jpg"
                 className="rounded-full mt-6 mb-7"
@@ -97,7 +94,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold mb-7">i&apos;m a <b className="underline">huge nerd</b></h2>
               <p>mainly for learning & personal development.</p>
               <p>i&apos;m always trying to better myself, my systems, and my principles.</p>
-              <p>sitting down with a book or an hour+ long lecture and taking notes is my favorite way to enjoy an afternoon.</p>
+              <p>sitting down with a book or a video lecture & taking notes is my favorite way to enjoy an afternoon.</p>
             </div>
           </div>
           <Separator orientation="horizontal" className="my-10"/>
@@ -119,7 +116,6 @@ export default function Home() {
               please reach out!
             </p>
           </div>
-        <Footer/>
         </Container>
     </>
   )
