@@ -1,5 +1,3 @@
-"use client"
-
 import Container from "@/components/ui/container"
 import Image from "next/image"
 import { Separator } from "@/components/ui/separator"
