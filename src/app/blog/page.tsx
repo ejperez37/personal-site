@@ -1,5 +1,5 @@
+import PostsList from "@/components/PostsList";
+
 export default function Page() {
-    return (
-        <p>whaddup</p>
-    )
-  }
+    return <PostsList></PostsList>
+}
