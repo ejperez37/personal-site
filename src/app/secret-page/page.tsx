@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <Container>
-        <div className="mx-6 mt-6 text-center md:text-left">
+        <section className="mx-6 mt-6 text-center md:text-left">
           <h2 className="text-3xl font-bold mb-6 underline">
             you&apos;ve found my secret page!
           </h2>
@@ -24,8 +24,8 @@ export default function Page() {
             but, the part of it where you get to share the people and the things
             you care about is admittedly fun so... here we are!
           </p>
-        </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 grid-flow-row gap-2 mt-7 text-center">
+        </section>
+        <section className="grid sm:grid-cols-2 md:grid-cols-3 grid-flow-row gap-2 mt-7 text-center">
           <Card className="flex flex-col justify-center items-center">
             <CardContent>
               <Image
@@ -192,7 +192,7 @@ export default function Page() {
               </CardDescription>
             </CardFooter>
           </Card>
-        </div>
+        </section>
       </Container>
     </>
   )

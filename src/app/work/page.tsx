@@ -10,11 +10,11 @@ import {
 export default function Page() {
   return (
     <Container>
-      <div className="mx-6 mt-6 text-center lg:text-left">
+      <section className="mx-6 mt-6 text-center lg:text-left">
         <h2 className="text-3xl font-bold mb-6 underline">my work.</h2>
         <p>curated web dev work</p>
-      </div>
-      <div className="my-3 mx-3 flex flex-col items-stretch lg:flex-row lg:justify-between">
+      </section>
+      <section className="my-3 mx-3 flex flex-col items-stretch lg:flex-row lg:justify-between">
         <Card className="flex flex-col items-center mx-3 my-3 text-center lg:text-left">
           <CardContent>
             <Image
@@ -54,7 +54,7 @@ export default function Page() {
             <CardDescription>test description of mock project</CardDescription>
           </CardContent>
         </Card>
-      </div>
+      </section>
     </Container>
   )
 }

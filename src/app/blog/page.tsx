@@ -5,7 +5,7 @@ import Container from '@/components/ui/container'
 export default function Page() {
   return (
     <Container>
-      <div className="mx-6 mt-6 text-center md:text-left">
+      <section className="mx-6 mt-6 text-center md:text-left">
         <h2 className="text-3xl font-bold mb-6 underline">my blog.</h2>
         <Card className="px-3 py-3 leading-7">
           <h3 className="italic text-center text-lg">read this first!</h3>
@@ -34,7 +34,7 @@ export default function Page() {
             <i className="underline">and</i> do the dishes for you!
           </p>
         </Card>
-      </div>
+      </section>
       <PostsList></PostsList>
     </Container>
   )
