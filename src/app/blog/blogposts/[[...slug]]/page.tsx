@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardFooter,
 } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 import { getPostData, getSortedPostsData } from '@/lib/posts'
 import NotFound from '@/app/blog/blogposts/[[...slug]]/not-found'
 import getFormattedDate from '@/lib/getFormattedDate'
@@ -55,7 +56,9 @@ export default async function Post({ params }: { params: { postId: string } }) {
       <article>
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
         <p>
-          <Link href="/blog">back to all posts</Link>
+          <Button asChild variant="ghost">
+            <Link href="/blog">back to all posts</Link>
+          </Button>
         </p>
       </article>
     </main>

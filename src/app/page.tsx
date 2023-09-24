@@ -36,8 +36,8 @@ export default function Home() {
               , but my friends call me <b>e.j.</b>! welcome to my personal site.
             </p>
             <p>
-              i wanted this to be as comfy as my own room, hence the name, so
-              please make yourself at home & enjoy!
+              i wanted this to be as comfy as my room, where my friends and i
+              would hang out(hence the name), so please make yourself at home!
             </p>
             <p className="mt-6">
               without further ado; a few things about me...
@@ -93,7 +93,7 @@ export default function Home() {
             </p>
             <p>
               this has lead to not only efficiency & efficacy, but also
-              adaptability & resiliency in everything i tackle.
+              adaptability & resiliency in everything i do.
             </p>
             <p>
               ~10 years of experience across muay thai, boxing, and jiu-jitsu;

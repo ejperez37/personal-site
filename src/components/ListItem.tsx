@@ -13,7 +13,7 @@ export default function ListItem({ post }: Props) {
 
   return (
     <li className="flex justify-center">
-      <Card className="w-11/12 px-5 py-5">
+      <Card className="w-11/12 px-5 py-5 hover:bg-accent hover:text-accent-foreground">
         <Link href={`/blog/blogposts/${id}`}>
           <CardTitle className="underline text-2xl">{title}</CardTitle>
           <p>{formattedDate}</p>

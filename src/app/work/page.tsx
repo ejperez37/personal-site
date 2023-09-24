@@ -16,7 +16,7 @@ export default function Page() {
         <p>curated web dev work</p>
       </section>
       <section className="my-3 mx-3 flex flex-col items-stretch lg:flex-row lg:justify-between">
-        <Card className="flex flex-col items-center mx-3 my-3 text-center lg:text-left">
+        <Card className="flex flex-col items-center mx-3 my-3 text-center lg:text-left hover:bg-accent hover:text-accent-foreground">
           <Link href="/work/work-page1">
             <CardContent>
               <Image
@@ -33,7 +33,7 @@ export default function Page() {
             </CardContent>
           </Link>
         </Card>
-        <Card className="flex flex-col items-center mx-3 my-3 text-center lg:text-left">
+        <Card className="flex flex-col items-center mx-3 my-3 text-center lg:text-left hover:bg-accent hover:text-accent-foreground">
           <Link href="/work/work-page2">
             <CardContent>
               <Image
@@ -50,7 +50,7 @@ export default function Page() {
             </CardContent>
           </Link>
         </Card>
-        <Card className="flex flex-col items-center mx-3 my-3 text-center lg:text-left">
+        <Card className="flex flex-col items-center mx-3 my-3 text-center lg:text-left hover:bg-accent hover:text-accent-foreground">
           <Link href="/work/work-page3">
             <CardContent>
               <Image
