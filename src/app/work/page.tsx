@@ -20,7 +20,7 @@ export default function Page() {
           <Link href="/work/work-page1">
             <CardContent>
               <Image
-                src="/images/vscodestock.jpg"
+                src="/images/vscodestock.jpeg"
                 className="py-5"
                 height={400}
                 width={400}
@@ -37,7 +37,7 @@ export default function Page() {
           <Link href="/work/work-page2">
             <CardContent>
               <Image
-                src="/images/vscodestock.jpg"
+                src="/images/vscodestock.jpeg"
                 className="py-5"
                 height={400}
                 width={400}
@@ -54,7 +54,7 @@ export default function Page() {
           <Link href="/work/work-page3">
             <CardContent>
               <Image
-                src="/images/vscodestock.jpg"
+                src="/images/vscodestock.jpeg"
                 className="py-5"
                 height={400}
                 width={400}

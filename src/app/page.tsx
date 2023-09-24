@@ -47,7 +47,7 @@ export default function Home() {
         <Separator orientation="horizontal" className="my-10" />
         <section className="flex flex-col sm:flex-row justify-around items-center text-center mb-14 mx-3">
           <Image
-            src="/images/vscodestock.jpg"
+            src="/images/vscodestock.jpeg"
             className="rounded-full mt-6 mb-7"
             height={400}
             width={400}
