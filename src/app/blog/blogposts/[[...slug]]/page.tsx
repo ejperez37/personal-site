@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { getPostData, getSortedPostsData } from '@/lib/posts'
-import NotFound from '@/app/blog/blogposts/[[...slug]]/not-found'
+import { notFound } from 'next/navigation'
 import getFormattedDate from '@/lib/getFormattedDate'
 import Link from 'next/link'
 
@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: { postId: string } }) {
   const { postId } = params
 
   if (!posts.find((post) => post.id === postId)) {
-    return NotFound()
+    return notFound()
   }
 
   const { title, date, contentHtml } = await getPostData(postId)
