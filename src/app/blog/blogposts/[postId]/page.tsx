@@ -2,8 +2,8 @@ import {
   Card,
   CardContent,
   CardTitle,
-  CardDescription,
   CardHeader,
+  CardDescription,
   CardFooter,
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -50,17 +50,27 @@ export default async function Page({ params }: { params: { postId: string } }) {
   const pubDate = getFormattedDate(date)
 
   return (
-    <main>
-      <h2>{title}</h2>
-      <p>{pubDate}</p>
-      <article>
-        <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        <p>
+    <main className="mx-6 mt-6 text-center md:text-left">
+      <Card className="border-none">
+        <CardHeader>
+          <CardTitle className="text-3xl font-bold underline">
+            {title}
+          </CardTitle>
+          <CardDescription>
+            <p>{pubDate}</p>
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <article>
+            <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
+          </article>
+        </CardContent>
+        <CardFooter className="flex justify-center md:justify-start mb-32">
           <Button asChild variant="ghost">
             <Link href="/blog">back to all posts</Link>
           </Button>
-        </p>
-      </article>
+        </CardFooter>
+      </Card>
     </main>
   )
 }
