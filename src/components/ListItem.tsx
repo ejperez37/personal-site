@@ -8,20 +8,17 @@ type Props = {
 }
 
 export default function ListItem({ post }: Props) {
-  const { id, title, date } = post
+  const { id, title, date, description } = post
   const formattedDate = getFormattedDate(date)
 
   return (
     <li className="flex justify-center">
       <Card className="w-11/12 px-5 py-5 hover:bg-accent hover:text-accent-foreground">
-        <Link href={`/blog/blogposts/${id}`}>
+        <Link href={`blog/blogposts/${id}`}>
           <CardTitle className="underline text-2xl">{title}</CardTitle>
           <p>{formattedDate}</p>
           <Separator orientation="horizontal" className="my-2" />
-          <CardDescription>
-            description here - edit &apos;generateMetadata&apos; & blog-posts to
-            contain descriptions
-          </CardDescription>
+          <CardDescription>{description}</CardDescription>
         </Link>
       </Card>
     </li>

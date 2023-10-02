@@ -24,6 +24,7 @@ export function getSortedPostsData() {
       id,
       title: matterResult.data.title,
       date: matterResult.data.date,
+      description: matterResult.data.description,
     }
 
     // Combine the data with the id
@@ -35,7 +36,8 @@ export function getSortedPostsData() {
 }
 
 export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`)
+  const fileName = `${id}`.concat(".md")
+  const fullPath = path.join(postsDirectory, fileName)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   //Use gray-matter to parse the post metadata section
@@ -51,6 +53,7 @@ export async function getPostData(id: string) {
     id,
     title: matterResult.data.title,
     date: matterResult.data.date,
+    description: matterResult.data.description,
     contentHtml,
   }
 
