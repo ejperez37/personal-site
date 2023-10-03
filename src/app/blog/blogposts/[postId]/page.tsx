@@ -50,9 +50,9 @@ export default async function Page({ params }: { params: { postId: string } }) {
   const pubDate = getFormattedDate(date)
 
   return (
-    <main className="mx-6 mt-6 text-center md:text-left">
-      <Card className="border-none">
-        <CardHeader>
+    <main className="mx-6 mt-6">
+      <Card className="border-none w-full">
+        <CardHeader className="text-center md:text-left">
           <CardTitle className="text-3xl font-bold underline">
             {title}
           </CardTitle>
@@ -61,7 +61,7 @@ export default async function Page({ params }: { params: { postId: string } }) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <article>
+          <article className="prose lg:prose-xl dark:prose-invert">
             <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
           </article>
         </CardContent>
