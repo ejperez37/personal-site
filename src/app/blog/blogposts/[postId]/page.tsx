@@ -51,7 +51,7 @@ export default async function Page({ params }: { params: { postId: string } }) {
 
   return (
     <main className="mx-6 mt-6">
-      <Card className="border-none w-full">
+      <Card className="border-none">
         <CardHeader className="text-center md:text-left">
           <CardTitle className="text-3xl font-bold underline">
             {title}
@@ -61,11 +61,11 @@ export default async function Page({ params }: { params: { postId: string } }) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <article className="prose lg:prose-xl dark:prose-invert">
+          <article className="prose lg:prose-xl dark:prose-invert whitespace-pre-line">
             <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
           </article>
         </CardContent>
-        <CardFooter className="flex justify-center md:justify-start mb-32">
+        <CardFooter className="flex justify-center md:justify-start my-20">
           <Button asChild variant="ghost">
             <Link href="/blog">back to all posts</Link>
           </Button>
