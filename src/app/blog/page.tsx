@@ -18,20 +18,10 @@ export default function Page() {
           </p>
           <br />
           <p>
-            to be upfront, however, this is for me to share my thoughts on what
-            i&apos;m currently learning or working on. i may or may not use
-            specific nomenclature without further explanation. things that seem
-            revelational or impactful to me and<i> my systems</i> might seem
-            inconsequential to you. as you read more and more, you should be
-            able to pick up on common principles and themes that i touch on and
-            connect the dots for yourself.
-          </p>
-          <br />
-          <p>
             as a proponent of open-source knowledge, i implore you to do your
             own research and take the wheel in your own education - and to not
             rely on strangers on the internet to give you food for thought{' '}
-            <i className="underline">and</i> do the dishes for you!
+            <em className="underline">and</em> do the dishes for you!
           </p>
         </Card>
       </section>
