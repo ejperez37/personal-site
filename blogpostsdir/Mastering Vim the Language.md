@@ -1,6 +1,6 @@
 ---
 title: mastering vim the language
-date: 02-06-2024
+date: 02-06-24
 description: notes on my new fun toy
 ---
 
