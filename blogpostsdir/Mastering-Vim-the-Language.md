@@ -4,9 +4,11 @@ date: 02-06-24
 description: notes on my new fun toy
 ---
 
-[LINK TO YT VIDEO](https://www.youtube.com/watch?v=wlR5gYd6um0&list=PLgsG1EXQ-Ro2t_oelP4cE9yeocwV-wm2K&index=21&t=1s&ab_channel=thoughtbot)
+<a href="https://www.youtube.com/watch?v=wlR5gYd6um0&list=PLgsG1EXQ-Ro2t_oelP4cE9yeocwV-wm2K&index=21&t=1s&ab_channel=thoughtbot">LINK TO YT VIDEO</a>
 
 This is different from my other blog posts - these are unedited notes. I brought these directly over from my Obsidian vault, since they stay in the ever-snazzy md format. A foreshadowing of what I hope to accomplish with my move from Notion to Obsidian!
+
+UPDATE: This is somewhat gross to look at, but I need to build actual projects instead of futzing around with formatting my not-so-important blog posts. Sumimasen gozaimasu.
 
 - “Typing is not the bottleneck”….”thought is”
   - It’s not the speed that makes learning Vim worth it - it’s the integration you experience with your code
@@ -61,7 +63,7 @@ This is different from my other blog posts - these are unedited notes. I brought
 - In fact, the quote shared from the article "Stop the Vim Configuration Madness" summarizes the sentiment:
   - "You know what improves productivity? Mastering motions & operators"
   - AKA MASTER THE FUNDAMENTALS AND IGNORE THE "COMBO OF THE WEEK" - THEN YOU CAN DO ANYTHING
-- Classic [StackOverflow post](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118) that sets the standard on talking about the Vim language
+- Classic <a href="https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118">StackOverflow post</a> that sets the standard on talking about the Vim language
 - Tips for mastering the language:
   - The "dot" command(the repeat command)
     - Use the more general text object over motions aka iw instead of w; it's more REPEATABLE, more EXPRESSIVE of what you're trying to do
